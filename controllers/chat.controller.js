@@ -32,8 +32,8 @@ export const chatCompletion = async (req, res) => {
   try {
     const { prompt } = req.body;
     const answer = await openapi.createCompletion({
-      // model: "davinci:ft-vine-strategies-2023-04-04-17-08-36",
-      model: "text-davinci-003",
+      model: "davinci:ft-vine-strategies-2023-04-04-17-08-36",
+      // model: "text-davinci-003",
       prompt: prompt,
       temperature: 0,
       max_tokens: 3000
