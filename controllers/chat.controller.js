@@ -32,7 +32,7 @@ export const chatCompletion = async (req, res) => {
   try {
     const { prompt } = req.body;
     const answer = await openapi.createCompletion({
-      model: "davinci:ft-vine-strategies-2023-04-04-17-08-36",
+      model: "davinci:ft-vine-strategies-2023-04-05-06-24-27",
       // model: "text-davinci-003",
       prompt: prompt,
       temperature: 0,
