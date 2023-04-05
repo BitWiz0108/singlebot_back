@@ -28,13 +28,14 @@ export const fineTune = async (req, res) => {
 }
 
 export const chatCompletion = async (req, res) => {
+  console.log("!@#!@#!@#");
   try {
     const { prompt } = req.body;
     const answer = await openapi.createCompletion({
-      model: "text-davinci-003",
+      model: "davinci:ft-vine-strategies-2023-04-04-17-08-36",
       prompt: prompt,
-      temperature: 0,
-      max_tokens: 3000
+      // temperature: 0,
+      max_tokens: 100
     });
     const text = answer.data.choices[0].text;
     res.status(200).json({ text });
