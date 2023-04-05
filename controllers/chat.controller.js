@@ -36,7 +36,7 @@ export const chatCompletion = async (req, res) => {
       // model: "text-davinci-003",
       prompt: prompt,
       temperature: 0,
-      max_tokens: 3000
+      max_tokens: 1000
     });
     const text = answer.data.choices[0].text;
     res.status(200).json({ text });
