@@ -28,12 +28,11 @@ const training_data = fs.createReadStream("training_data.json");
 // }
 
 export const chatCompletion = async (req, res) => {
-  console.log("!@#!@#!@#");
   try {
     const { prompt } = req.body;
     const answer = await openapi.createCompletion({
-      model: "davinci:ft-vine-strategies-2023-04-05-06-24-27",
-      // model: "text-davinci-003",
+      // model: "davinci:ft-vine-strategies-2023-04-05-06-24-27",
+      model: "text-davinci-003",
       prompt: prompt,
       temperature: 0,
       max_tokens: 100
