@@ -9,13 +9,12 @@ export const chatCompletion = async (req, res) => {
   const { prompt } = req.body;
   console.log("!!@!@!@!@", prompt);
 
-  if (prompt == " Hey") {
-    res.status(200).json({ text: { role: "assistant", content: "Hey there!" } })
-  } else if (prompt == " hey") {
-    res.status(200).json({ text: { role: "assistant", content: "Hey there!" } })
+  if (prompt == "Hey" || "hey" || "hi" || "Hi" || "Hi," || "Hey there," || "Hey there" || "Hi!" || "Hi there," || "Hi there") {
+    setTimeout(() => {
+      res.status(200).json({ text: { role: "assistant", content: "Hey, How are you?" } })
+    }, 1500);
   } else {
     const base_prompt = `Imagine you are a chatbot to help me. NOT the AI language model. Do not repeat the same responses.
-    You can say me "Hey there", when only I say "Hi!".
     Don't try to finish our conversation. Let us go through just like good friends conversation go. Let us make our conversation natural and friendly. `;
     try {
       const answer = await openapi.createChatCompletion({
