@@ -18,7 +18,7 @@ export const chatCompletion = async (req, res) => {
       max_tokens: 1000
     });
     // setTimeout(() => {
-    res.status(200).json({ text: { role: "assistant", content: "Hey, How are you?" } })
+    res.status(200).json({ text: { role: "assistant", content: "Hey there, How are you?" } })
     // }, 1500);
   } else {
     const base_prompt = `Imagine you are a chatbot to help me. NOT the AI language model. Do not repeat the same responses.
